@@ -4,7 +4,7 @@ import basicInfo from "./form/basicInfo";
 import eduInfo from "./form/eduInfo";
 import workExperience from "./form/workExperience";
 import skill from "./form/skill";
-import customField from "./form/customField";
+import Project from "./form/project";
 
 function Editor() {
     const [basicInfo, setBasicInfo] = useState({
@@ -50,11 +50,11 @@ function Editor() {
         }
     ]);
 
-    const [customField, setCustomField] = useState([
+    const [projects, setProjects] = useState([
         {
             id: uuidv4(),
             title: '',
-            description: ''
+            description: '',
         }
     ]);
 
@@ -122,22 +122,22 @@ function Editor() {
         setSkills(skills.filter(skill => skill.id !== id));
     }
 
-    const handleCustomFieldChange = (id, newCustomField) => {
-        const updatedCustomField = customField.map(customField => {
-            if (customField.id === id) {
-                return {...newCustomField, id: customField.id};
+    const handleProjectChange = (id, newProject) => {
+        const updatedProjects = projects.map(project => {
+            if (project.id === id) {
+                return {...newProject, id: project.id};
             }
-            return customField;
+            return project;
         });
-        setCustomField(updatedCustomField);
-    };
-
-    const addCustomField = () => {
-        setCustomField([...customField, {id: uuidv4(), title: '', description: ''}]);
+        setProjects(updatedProjects);
     }
 
-    const removeCustomField = (id) => {
-        setCustomField(customField.filter(customField => customField.id !== id));
+    const addProject = () => {
+        setProjects([...projects, {id: uuidv4(), title: '', description: ''}]);
+    }
+
+    const removeProject = (id) => {
+        setProjects(projects.filter(project => project.id !== id));
     }
 
     return (
