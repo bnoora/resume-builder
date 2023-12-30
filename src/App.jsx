@@ -1,43 +1,23 @@
 import { useState } from 'react'
 import './App.css'
-import {v4 as uuidv4} from 'uuid';
-import eduInfo from './components/form/eduInfo';
+import Editor from './components/editor';
+import Preview from './components/preview';
 
 function App() {
-  const [educations, setEducations] = useState([
-    { 
-        id: uuidv4(),
-        school: '',
-        degree: '',
-        schoolStart: '',
-        schoolEnd: '',
-        schoolCity: '',
-        schoolState: '',
-        isOngoing: false
-    }
-  ]);
-
-  const handleEducationChange = (id, newEducation) => {
-    const updatedEducations = educations.map(education => {
-      if (education.id === id) {
-        return {...newEducation, id: education.id};
-      }
-      return education;
-    });
-    setEducations(updatedEducations);
-  };
-
-  const addEducation = () => {
-    setEducations([...educations, {id: uuidv4(), school: '', degree: '', schoolStart: '', 
-    schoolEnd: '', schoolCity: '', schoolState: '', isOngoing: false}]);
-  }
- 
-  const removeEducation = (id) => {
-    setEducations(educations.filter(education => education.id !== id));
-  }
-
   return (
-    <div></div>
+    <div className="App">
+      <header className="App-header">
+        <h1>Resume Builder</h1>
+      </header>
+      <main>
+        <section className="editorsect">
+          <Editor />
+        </section>
+        <section className="previewsect">
+          <Preview />
+        </section>
+      </main>
+    </div>
   )
 }
 
