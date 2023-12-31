@@ -27,8 +27,6 @@ function Editor() {
         removeProject
     } = cvState();
 
-    console.log(1);
-
     return (
         <div className='editor'>
             <div className='editorSection'>

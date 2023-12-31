@@ -43,7 +43,6 @@ function EduInfo(props) {
                         </div>
                     </section>
                 ))}
-                <button type="button" onClick={onAdd}>Add Education</button>
             </form>
         </section>
     )

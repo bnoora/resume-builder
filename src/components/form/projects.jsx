@@ -22,7 +22,6 @@ function Project(props) {
                         </div>
                     </section>
                 ))}
-                <button type="button" onClick={onAdd}>Add Project</button>
             </form>
         </section>
     )

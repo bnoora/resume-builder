@@ -41,7 +41,6 @@ function WorkExperience(props) {
                         </div>
                     </section>
                 ))}
-                <button type="button" onClick={onAdd}>Add Work Experience</button>
             </form>
         </section>
     )
