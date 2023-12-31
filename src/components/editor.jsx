@@ -1,10 +1,9 @@
-import { v4 as uuidv4 } from 'uuid';
 import basicInfo from "./form/basicInfo";
 import eduInfo from "./form/eduInfo";
 import workExperience from "./form/workExperience";
 import skill from "./form/skill";
 import Project from "./form/project";
-import useSharedState from "./useSharedState";
+import cvState from "./cvState";
 
 function Editor() {
     const {
@@ -26,7 +25,7 @@ function Editor() {
         handleProjectChange,
         addProject,
         removeProject
-    } = useSharedState();
+    } = cvState();
 
     return (
         <div className='editor'>
@@ -69,8 +68,8 @@ function Editor() {
             <div className='editorSection'>
                 <h1>Projects</h1>
                 <div className='editorSectionContent'>
-                    {Project.map(Project => (
-                        <Project key={Project.id} data={Project} onChange={handleProjectChange} 
+                    {projects.map(project => (
+                        <Project key={project.id} data={project} onChange={handleProjectChange} 
                         onRemove={removeProject}/>
                     ))}
                     <button onClick={addProject}>Add Project</button>
