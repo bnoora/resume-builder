@@ -23,9 +23,12 @@ function Display() {
         removeProject
     } = cvState();
 
+    const {firstName, lastName, email, phone, address, city, state, zip} = basicInfo;
+
     return (
-        <div>
-            {/* Display the basicInfo and other data */}
+        <div className='display'>
+            <div className="firstname">{firstName}</div>
+            <div className="lastname">{lastName}</div>
         </div>
     );
 }

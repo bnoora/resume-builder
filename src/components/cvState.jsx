@@ -62,6 +62,7 @@ export default function cvState() {
     };
 
     const handleEducationChange = (id, newEducation) => {
+        console.log("Updating education with id:", id, "New data:", newEducation);
         const updatedEducations = educations.map(education => {
             if (education.id === id) {
                 return {...newEducation, id: education.id};
@@ -72,10 +73,19 @@ export default function cvState() {
     };
 
     const addEducation = () => {
-        setEducations([...educations, {id: uuidv4(), school: '', degree: '', startDate: '', 
-        endDate: '', schoolCity: '', schoolState: '', isOngoing: false}]);
-    }
-
+        const newEducation = {
+            id: uuidv4(),
+            school: '',
+            degree: '',
+            schoolStart: '',
+            schoolEnd: '',
+            schoolCity: '',
+            schoolState: '',
+            isOngoing: false
+        };
+        setEducations([...educations, newEducation]);
+    };
+    
     const removeEducation = (id) => {
         setEducations(educations.filter(education => education.id !== id));
     }

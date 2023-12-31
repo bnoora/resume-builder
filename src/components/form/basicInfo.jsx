@@ -4,7 +4,6 @@ function BasicInfo(props) {
     return (
         <section className="formSection">
             <form className="form">
-                <h1>Basic Info</h1>
                 <section className="formDoubleSection" id="nameSection">
                     <div className="formSection">
                         <label htmlFor="firstName">First Name</label>
