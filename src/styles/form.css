@@ -1,0 +1,41 @@
+form { 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.formDoubleSection {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    gap: 2rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.formSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+#projectSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+#projectSection > * > textarea {
+    min-width: 400px;
+    min-height: 200px;
+    resize: none;
+    border-radius: 1rem;
+    padding: 1rem;
+}

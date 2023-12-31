@@ -3,9 +3,11 @@ import EduInfo from "./form/eduInfo";
 import WorkExperience from "./form/workExperience";
 import Skill from "./form/skill";
 import Project from "./form/projects";
-import cvState from "./cvState";
+import '../styles/editor.css';
+import '../styles/form.css';
 
-function Editor() {
+
+function Editor(props) {
     const {
         basicInfo,
         handleBasicInfoChange,
@@ -25,7 +27,9 @@ function Editor() {
         handleProjectChange,
         addProject,
         removeProject
-    } = cvState();
+    } = props;
+
+    console.log(skills);
 
     return (
         <div className='editor'>
@@ -33,6 +37,7 @@ function Editor() {
                 <h1>Basic Info</h1>
                 <BasicInfo data={basicInfo} onChange={handleBasicInfoChange}/>
             </div>
+            <hr className="sectLine"/>
             <div className='editorSection'>
                 <h1>Education</h1>
                 {educations.map(education => (
@@ -41,6 +46,7 @@ function Editor() {
                 ))}
                 <button onClick={addEducation}>Add Education</button>
             </div>
+            <hr className="sectLine"/>
             <div className='editorSection'>
                 <h1>Work Expeirence</h1>
                 {workExperiences.map(workExperience => (
@@ -49,6 +55,7 @@ function Editor() {
                 ))}
                 <button onClick={addWorkExperience}>Add Work Experience</button>
             </div>
+            <hr className="sectLine"/>
             <div className='editorSection'>
                 <h1>Skills</h1>
                 {skills.map(skill => (
@@ -57,6 +64,7 @@ function Editor() {
                 ))}
                 <button onClick={addSkill}>Add Skill</button>
             </div>
+            <hr className="sectLine"/>
             <div className='editorSection'>
                     <h1>Projects</h1>
                     {projects.map(project => (

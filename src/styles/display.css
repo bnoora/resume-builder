@@ -1,0 +1,145 @@
+.display {
+    color: black;
+    padding: 1rem;
+}
+
+.resumeCV {
+    background-color: aliceblue;
+    padding: 20px;
+    height: 98%;
+}
+
+#cvHead {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+#cvHead > * {
+    margin: 0;
+    padding: 0;
+}
+
+#cvHead > ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+#eduDisplaySection {
+    display: flex;
+    flex-direction: column;
+}
+
+#eduDisplaySection > h2 {
+    align-self: flex-start;
+    padding: 0;
+    margin: 0;
+}
+
+.eduDisplay {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 1rem;
+}
+
+.schoolDegree {
+    justify-self: flex-start;
+    text-align: left;
+}
+
+.dateLoc {
+    justify-self: flex-end;
+    text-align: right;
+}
+
+.workDisplay {
+    display: flex;
+    flex-direction: column;
+}
+
+#workDisplaySection {
+    display: flex;
+    flex-direction: column;
+}
+
+#workDisplaySection > h2 {
+    align-self: flex-start;
+    padding: 0;
+    margin: 0;
+}
+
+.companyPosition {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.companyPosition > div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.companyPosition > div > * {
+    margin: 0;
+    padding: 0;
+}
+
+
+#workDesc {
+    align-self: flex-start;
+}
+
+#skillDisplaySection {
+    display: flex;
+    flex-direction: column;
+}
+
+#skillDisplaySection > h2 {
+    align-self: flex-start;
+    padding: 0;
+    margin: 0;
+}
+
+#skillDisplaySection > ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+}
+
+#projectDisplaySection {
+    display: flex;
+    flex-direction: column;
+}
+
+#projectDisplaySection > h2 {
+    align-self: flex-start;
+    padding: 0;
+    margin: 0;
+}
+
+.projectDisplay {
+    display: flex;
+    flex-direction: column;
+}
+
+.projectDisplay > * {
+    margin: 0;
+    padding: 0;
+    padding-top: 1rem;
+    text-align: left;
+}
+
+
