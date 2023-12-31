@@ -3,11 +3,12 @@ import React from 'react';
 function EduInfo(props) {
     const {data, onChange, onAdd, onRemove} = props;
 
+    const educations = Array.isArray(data) ? data : [];
     return (
         <section className="formSection">
             <form className="form">
                 <h1>Education</h1>
-                {data.map((education, index) => (
+                {educations.map((education, index) => (
                     <section className="formDoubleSection" id="educationSection" key={education.id}>
                         <div className="formSection">
                             <label htmlFor="school">School</label>

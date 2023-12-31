@@ -1,11 +1,13 @@
 function Project(props) {
     const {data, onChange, onAdd, onRemove} = props;
 
+    const projects = Array.isArray(data) ? data : [];
+
     return (
         <section className="formSection">
             <form className="form">
                 <h1>Projects</h1>
-                {data.map((project, index) => (
+                {projects.map((project, index) => (
                     <section className="formDoubleSection" id="projectSection" key={project.id}>
                         <div className="formSection">
                             <label htmlFor="title">Title</label>

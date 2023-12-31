@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import './App.css'
 import Editor from './components/editor';
-import Preview from './components/preview';
+import Display from './components/display';
 
 function App() {
   return (
@@ -10,12 +10,8 @@ function App() {
         <h1>Resume Builder</h1>
       </header>
       <main>
-        <section className="editorsect">
-          <Editor />
-        </section>
-        <section className="previewsect">
-          <Preview />
-        </section>
+        <Editor />
+        <Display />
       </main>
     </div>
   )

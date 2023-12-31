@@ -1,11 +1,12 @@
-function workExperience(props) {
+function WorkExperience(props) {
     const {data, onChange, onAdd, onRemove} = props;
 
+    const workExperiences = Array.isArray(data) ? data : [];
     return (
         <section className="formSection">
             <form className="form">
                 <h1>Work Expeirence</h1>
-                {data.map((workExperience, index) => (
+                {workExperiences.map((workExperience, index) => (
                     <section className="formDoubleSection" id="workExperienceSection" key={workExperience.id}>
                         <div className="formSection">
                             <label htmlFor="company">Company</label>
@@ -46,4 +47,4 @@ function workExperience(props) {
     )
 }
 
-export default workExperience;
+export default WorkExperience;

@@ -1,4 +1,4 @@
-function skill(props) {
+function Skill(props) {
   const { skill, handleChange } = props;
   return (
     <div className="formSection">
@@ -8,3 +8,5 @@ function skill(props) {
     </div>
   );
 }
+
+export default Skill;

@@ -1,4 +1,4 @@
-function basicInfo() {
+function BasicInfo(props) {
     const {data, onChange} = props;
 
     return (
@@ -40,4 +40,4 @@ function basicInfo() {
     )
 }
 
-export default basicInfo;
+export default BasicInfo;
