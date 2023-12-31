@@ -3,23 +3,23 @@ import { v4 as uuidv4 } from 'uuid';
 
 export default function cvState() {
     const [basicInfo, setBasicInfo] = useState({
-        firstName: '',
-        lastName: '',
-        email: '',
-        linkedin: '',
-        phone: '',
-        github: ''
+        firstName: 'John',
+        lastName: 'Doe',
+        email: 'jd@gmail.com',
+        linkedin: 'linkedin.com/in/johndoe',
+        phone: '123-456-7890',
+        github: 'github.com/johndoe'
     });
 
     const [educations, setEducations] = useState([
         { 
             id: uuidv4(),
-            school: '',
-            degree: '',
-            startDate: '',
-            endDate: '',
-            schoolCity: '',
-            schoolState: '',
+            school: 'University of California, Berkeley',
+            degree: 'Bachelor of Science',
+            startDate: '08/2016',
+            endDate: '05/2020',
+            schoolCity: 'Berkeley',
+            schoolState: 'CA',
             isOngoing: false
         }
     ]);
@@ -27,29 +27,29 @@ export default function cvState() {
     const [workExperiences, setWorkExperiences] = useState([
         {
             id: uuidv4(),
-            company: '',
-            position: '',
-            startDate: '',
-            endDate: '',
-            isCurrent: false,
-            city: '',
-            state: '',
-            description: ''
+            company: 'Google',
+            position: 'Software Engineer',
+            startDate: '06/2020',
+            endDate: 'Present',
+            isCurrent: true,
+            city: 'Mountain View',
+            state: 'CA',
+            description: 'Worked on Google Search'
         }
     ]);
 
     const [skills, setSkills] = useState([
         {
             id: uuidv4(),
-            skill: ''
+            skill: 'JavaScript'
         }
     ]);
 
     const [projects, setProjects] = useState([
         {
             id: uuidv4(),
-            title: '',
-            description: '',
+            title: 'Project 1',
+            description: 'This is a project'
         }
     ]);
 
